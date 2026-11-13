@@ -1,0 +1,9 @@
+{
+  "name": "Tienda Local SL (retail)",
+  "country": "ES",
+  "sector": "other",
+  "employees": 12,
+  "turnoverMEur": 1.8,
+  "balanceSheetMEur": 1,
+  "processesPersonalData": true
+}

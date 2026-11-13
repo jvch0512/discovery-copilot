@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>discovery-copilot</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>discovery-copilot</h1>
+    <p class="sub" id="sub"></p>
+  </div>
+  <div class="tools">
+    <label><span id="l-lang"></span><select id="lang"><option value="en">English</option><option value="es">Español</option></select></label>
+    <label><span id="l-ex"></span><select id="ex"></select></label>
+  </div>
+</header>
+<main>
+  <section class="panel" id="form">
+    <h2 id="h-co"></h2>
+    <div class="grid">
+      <label><span id="l-name"></span><input id="name" type="text" maxlength="120"></label>
+      <label><span id="l-country"></span><select id="country"><option>ES</option><option>PT</option><option>FR</option><option>DE</option><option>IT</option><option>NL</option><option>IE</option><option>BE</option></select></label>
+      <label class="wide"><span id="l-sector"></span><select id="sector"></select></label>
+      <label><span id="l-emp"></span><input id="employees" type="number" min="0"></label>
+      <label><span id="l-turn"></span><input id="turnover" type="number" min="0" step="0.1"></label>
+      <label><span id="l-bal"></span><input id="balance" type="number" min="0" step="0.1"></label>
+      <label><span id="l-pub"></span><select id="pub"><option value="none"></option><option value="supplier"></option><option value="public-body"></option></select></label>
+    </div>
+    <div class="checks" id="checks"></div>
+    <h2 id="h-mat"></h2>
+    <p class="hint" id="hint-mat"></p>
+    <div id="maturity"></div>
+  </section>
+  <section id="out">
+    <div class="scope" id="scope"></div>
+    <div class="two">
+      <div class="panel"><h2 id="h-gaps"></h2><div id="gaps"></div></div>
+      <div class="panel"><h2 id="h-demo"></h2><ol id="demo"></ol></div>
+    </div>
+    <div class="panel"><h2 id="h-qs"></h2><div id="qs"></div></div>
+    <div class="panel">
+      <div class="row"><h2 id="h-md"></h2><button id="copy" type="button"></button></div>
+      <pre id="md"></pre>
+    </div>
+    <p class="hint" id="caveat"></p>
+  </section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

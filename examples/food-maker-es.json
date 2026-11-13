@@ -1,0 +1,11 @@
+{
+  "name": "Conservas del Norte (food manufacturer)",
+  "country": "ES",
+  "sector": "food",
+  "employees": 180,
+  "turnoverMEur": 40,
+  "balanceSheetMEur": 35,
+  "processesPersonalData": true,
+  "partOfLargerGroup": false,
+  "maturity": { "a": 0, "b": 0, "c": 1, "d": 0, "e": 0, "f": 0, "g": 1, "h": 0, "i": 1, "j": 1 }
+}

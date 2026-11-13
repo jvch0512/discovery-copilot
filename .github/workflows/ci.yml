@@ -1,0 +1,24 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm test
+      - name: Sample briefs are up to date
+        run: |
+          node dist/src/cli.js examples/msp-es.json > /tmp/en.md
+          diff /tmp/en.md docs/sample-brief.md
+          node dist/src/cli.js --lang es examples/msp-es.json > /tmp/es.md
+          diff /tmp/es.md docs/sample-brief.es.md
